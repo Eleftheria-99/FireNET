@@ -1,11 +1,12 @@
 from imageai.Detection.Custom import CustomObjectDetection, CustomVideoObjectDetection
-import os
+import os  #The OS module in Python provides a way of using operating system dependent functionality. The functions that the OS module provides allows you to interface with the underlying operating system that Python is running on – be that Windows, Mac or Linux
 
-execution_path = os.getcwd()
+execution_path = os.getcwd()  #Returns the current working directory.
 
 
 def train_detection_model():
     from imageai.Detection.Custom import DetectionModelTrainer
+    #This: imageai.Detection.Custom.CustomObjectDetection class.  allows you to train your own model on any set of images that corresponds to any type of objects of interest. The training process generates a JSON file that maps the objects names in your image dataset and the detection anchors, as well as creates lots of models.
 
     trainer = DetectionModelTrainer()
     trainer.setModelTypeAsYOLOv3()
